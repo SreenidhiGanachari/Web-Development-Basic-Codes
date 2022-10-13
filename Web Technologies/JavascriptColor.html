@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+	function m1(x){
+		var y=document.getElementById("x1");
+		x.style.backgroundColor="pink";
+		x.style.color="red";
+		y.value=y.value.toUpperCase();
+	}
+
+	function m2(x){
+		var y2=document.getElementById("x2");
+		x.style.backgroundColor="red";
+		x.style.border=" dashed 2px blue ";
+		y.value=y.value.toUpperCase();
+	}
+
+	function m3(x){
+		var y3=document.getElementById("x1");
+		var y4=document.getElementById("x2");
+		document.getElementById("x3")=document.getElementById("x1")+document.getElementById("x2");
+	}
+
+</script>
+<body bgcolor="blue">
+	<div style="border:1px solid blue margin-right:16px">
+	TextField1</div><input type="text" id="x1"><br>
+
+	<div style="border:1px solid blue margin-right:16px">
+	TextField2<input type="text" id="x2"></div><br>
+	
+	<div style="border:1px solid blue margin-right:16px">
+	TextField3<input type="text" id="x3"></div><br>
+
+	<button style="color:white margin-right:16px border: 10px solid blue" type="Submit" id="x6" onclick="m1(this)">First Button</button>
+</body>
+</head>
+</html>
+

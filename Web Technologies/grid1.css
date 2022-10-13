@@ -1,0 +1,45 @@
+.divp{
+		height: 100vh;
+		border-style: solid;
+		display: grid;
+		grid-template-areas:'id1 id2 id3'
+                             'id1 id4 id4'
+                             'id5 id6 id7'
+                             'id8 id8 id7';
+       grid-gap: 10px;
+                             
+	}
+
+	.div1 {
+		background-color: pink;
+		grid-area: id1;
+	}
+	.div2 {
+		background-color: blue;
+		grid-area: id2;
+	}
+	.div3 {
+		background-color: green;
+		grid-area: id3;
+	}
+	.div4 {
+		background-color: yellow;
+		grid-area: id4;
+	}
+	.div5 {
+		background-color: grey;
+		grid-area: id5;
+	}
+	.div6 {
+		background-color: pink;
+		grid-area: id6;
+	}
+	.div7 {
+		background-color: green;
+		grid-area: id7;
+	}
+	.div8 {
+		background-color: pink;
+		grid-area: id8;
+	}
+	

@@ -1,0 +1,36 @@
+<html>
+
+<script>
+	function m1(){
+		var name=document.getElementById("t1");
+		var email=document.getElementById("t2");
+		var subject=document.getElementById("t3");
+		var message=document.getElementById("t4");
+
+if (name.value==" "||email.value==" "||subject.value==" "||message.value==" "){
+	alert("Field is empty");
+	return false;
+
+	}}
+
+	else if(name.length<=10||email.length<=10||subject.length<=10||message.length<=10){
+		alert("");
+		return false;
+	}
+	else{
+		true;
+	}
+</script>
+<form onsubmit="return m1()" alert="Submitted">
+<body bgcolor="blue">
+	<h1>Contact Us</h1>
+	FULL NAME<br><input type="text" placeholder="Name" style="margin-right: 12px" id="t1"/>
+	EMAIL ADDRESS<br><input type="email" placeholder="Email Address" style="margin-right: 12px" id="t2"/><br><br>
+	SUBJECT<input type="text" placeholder="Subject" style="margin-right: 12px" id="t3"/><br><br>
+	MESSAGE<input type="textbox" placeholder="Message" style="margin-right: 12px" id="t4"/><br><br>
+	<button type="submit" style="color:white background=blue">Send Message</button><br><br>
+</form>
+</body>
+</html>
+	
+

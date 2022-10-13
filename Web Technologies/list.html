@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers msdt:dt="string">Winter Sem CSE 4004 -Web Technology Members</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers>
+<mso:SharedWithUsers msdt:dt="string">7;#Winter Sem CSE 4004 -Web Technology Members</mso:SharedWithUsers>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head><body>
+
+<h1>The XMLHttpRequest Object</h1>
+
+<button type="button" onclick="loadDoc()">Get Data</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET", "emp.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+ var list="<ul>";
+  var x = xmlDoc.getElementsByTagName("EMPLOYEE");
+  for (i = 0; i <x.length; i++) { 
+     list += "<li>" + x[i].getElementsByTagName("EMPID")[0].childNodes[0].nodeValue + "</li><li>"+
+     x[i].getElementsByTagName("ENAME")[0].childNodes[0].nodeValue +
+    "</li></ul>";
+     }
+  document.getElementById("demo").innerHTML = list;
+}
+
+
+</script>
+
+</body>
+</html>
